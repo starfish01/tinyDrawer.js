@@ -4,7 +4,7 @@ $replacement: 'drawer';
 $drawer-selector: 'drawer-menu';
 
 :root {
-  --tdm-drawer-width: 300px;
+  --tdm-drawer-width: 380px;
   --tdm-drawer-speed: .2s;
   --tdm-drawer-background: #eee;
   --tdm-backdrop-background: rgba(0,0,0,.5);
@@ -15,7 +15,7 @@ $drawer-selector: 'drawer-menu';
 #{$drawer-selector},
 [data-#{$replacement}-backdrop] {
   top: 0;
-  left: 0;
+  right: 0;
   position: fixed;
   display: block;
   display: none;
@@ -33,9 +33,9 @@ $drawer-selector: 'drawer-menu';
 #{$drawer-selector} {
   z-index: 99999;
 
-  margin-left: calc(var(--tdm-drawer-width) * -1);
+  margin-right: calc(var(--tdm-drawer-width) * -1);
   width: var(--tdm-drawer-width);
-  transition: margin-left var(--tdm-drawer-speed);
+  transition: margin-right var(--tdm-drawer-speed);
   background: var(--tdm-drawer-background);
 }
 
@@ -68,22 +68,7 @@ $drawer-selector: 'drawer-menu';
   }
 
   #{$drawer-selector} {
-    margin-left: 0;
-
-    transition: margin-left var(--tdm-drawer-speed);
+    margin-right: 0;
+    transition: margin-right var(--tdm-drawer-speed);
   }
-}
-
-// CLOSE ICON (optional)
-
-[data-#{$replacement}-backdrop]:before {
-  content: '';
-  height: 2rem;
-  width: 2rem;
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-x'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
-  background-size: 2rem;
-  display: block;
-  margin-top: 1rem;
-  margin-left: calc(var(--tdm-drawer-width) + 1rem);
-  opacity: .5;
 }
