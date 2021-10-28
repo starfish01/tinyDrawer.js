@@ -1,0 +1,31 @@
+{
+  "name": "tinydrawer",
+  "version": "1.0.0",
+  "description": "*Version 2.2* - [Changelog](changelog.md)",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starfish01/tinyDrawer.js.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/starfish01/tinyDrawer.js/issues"
+  },
+  "homepage": "https://github.com/starfish01/tinyDrawer.js#readme",
+  "dependencies": {
+    "sass": "^1.43.4"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify-es": "^3.0.0"
+  }
+}
