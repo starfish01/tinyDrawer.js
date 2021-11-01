@@ -51,11 +51,13 @@ class TinyDrawer {
   // Active unset
   activeUnset() {
     document.body.dataset[this.o.replacement] = '';
+    this.elementDrawer.dataset['position'] = 'closed';
   };
 
   // Active set
   activeSet() {
     document.body.dataset[this.o.replacement] = true;
+    this.elementDrawer.dataset['position'] = 'open';
   };
 
   // Offset top to variable
